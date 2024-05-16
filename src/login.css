@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat;
+}
+.gradient{
+    background: #054b61;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.getBack{
+    position: relative;
+    display: block;
+
+    color: #000000;
+    background: #ffffff;
+
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 30px;
+    cursor: pointer;
+}
+.getBack > ion-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #000000;
+}
+
+main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    border-radius: 10px;
+    background: #ffffff;
+
+    padding: 30px;
+}
+.h{
+    text-align: center;
+    margin: 15px;
+}
+
+.inputs{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.input-f{
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-f > input{
+    display: block;
+    border: 1px solid #444;
+    border-radius: 5px;
+    height: 30px;
+    width: 100%;
+    padding: 5px;
+}
+
+.submit{
+    text-align: center;
+}
+
+.input-f > .btn{
+    background: #00acd7;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+}
+
+.input-f > button{
+    border:none;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}

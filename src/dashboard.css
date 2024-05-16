@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Courier, monospace, sans-serif;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+body > main{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: var(--mainBackground);
+    display: flex;
+    color: var(--mainColor);
+    overflow: hidden;
+}
+body > main > .menu{
+    min-width: 250px;
+    width: calc(18% - 10px);
+    height: 100%;
+    background: var(--menuBackground);
+    margin-right: 10px;
+    position: relative;
+    color: var(--menuColor);
+    cursor: default;
+}
+body > main > .menu > h2 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;    
+    display: block;
+}
+body > main > .menu > h2 > small{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    font-weight: lighter;
+    display: block;
+}
+
+body > main > .menu > a{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    
+    display: block;
+    padding: 20px;
+    padding-left: 55px;
+    position: relative;
+
+    cursor: pointer;
+    color: var(--menuItemColor);
+}
+body > main > .menu > a:hover{
+    background: var(--menuItemBackground-hover);
+    color: var(--menuItemColor-hover);
+}
+body > main > .menu > .selected, .selected:hover{
+    background: var(--menuItemBackground-selected) !important;
+    color: var(--menuItemColor-selected) !important;
+}
+
+body > main > .menu > a > ion-icon{
+    padding-right: 10px;
+    margin-top: -2px;
+    margin-left: -35px;
+
+    font-weight: bold;
+    font-size: 20px;
+
+    position: absolute;
+}
+
+body > main > .menu > p{
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+    font-size: 12px;
+
+    width: 100%;
+    padding: 8px;
+    bottom: 0;
+
+    color: var(--menuFooterColor);
+    background: var(--menuFooterBackground);
+}
+
+body > main > .main-view{
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size-adjust: 10px;
+    position: relative;
+    width: 100%;
+    overflow: hidden scroll;
+}
+body > main > .main-view > *{
+    padding-left: 20px;
+}
+body > main > .main-view > h2{
+    padding-left: 0px;
+    padding-bottom: 15px;
+}
+body > main > .main-view > p{
+    padding-bottom: 15px;
+}
+body > main > .main-view > div{
+    margin-left: 15px;
+}
+body > main > .main-view > .field{
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+
+    width: 100%;
+    min-width: 300px;
+
+    border-radius: 1em;
+    background: var(--menuItemBackground);
+    color: var(--menuItemColor);
+    position: relative;
+}
+body > main > .main-view > .field > h4{
+    padding: 20px;
+}
+body > main > .main-view > .field > p{
+    padding: 5px 25px;
+    position: relative;
+}
+body > main > .main-view > .field > p:hover{
+    background: var(--menuItemBackground-hover);
+}
+body > main > .main-view > .field > p:last-of-type{
+    height: 40px;
+    border-radius: 0px 0px 10px 10px;
+}
+body > main > .main-view > .field > p > small{
+    width: 100%;
+    font-size: 15px;
+    left: -30px;
+    top: 5px;
+    display: inline-block;
+    text-align: right;
+    color: var(--menuItemBackground-selected);
+    position: absolute;
+}
+
+.plotChart{
+    min-width: 400px;
+    width: 500px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background-color: var(--plotBackground);
+    padding: 0;
+}
+.js-plotly-plot .plotly .user-select-none{
+    background-color: var(--plotBackground);
+}
+
+.settings-item{
+    position: relative;
+}
+.dropdown{
+    width: 80%;
+    padding: 5px;
+    padding-left: 10px;
+    border: 0;
+    border-radius: 1em;
+    margin-left: 10px;
+
+    background: var(--menuItemBackground);
+    color: var(--menuItemColor);
+    text-align: left;
+    position: relative;
+}
+.dropdown ion-icon{
+    position: absolute;
+    top: 7px;
+    right: 10px;
+}
+.dropdown-items{
+    position: absolute;
+    top: 35px;
+    left: 93px;
+
+    width: calc(80% - 15px);
+    border-radius: 1em;
+    background: var(--menuItemBackground);
+    color: var(--menuItemColor);
+    list-style: none;
+}
+.dropdown-items > li{
+    padding: 5px 10px;
+    border-radius: 1em;
+}
+.dropdown-items > li:first-of-type{
+    padding-top: 10px;
+}
+.dropdown-items > li:last-of-type{
+    padding-bottom: 10px;
+}
+.dropdown-items > li:hover{
+    background: var(--menuItemBackground-hover);
+}
+#posts-field{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.post{ 
+    position: relative;
+    margin: 10px;
+    color: var(--menuItemColor);
+    max-width: 495px;
+    width: 100%;
+    display: inline-table;
+}
+.post > div{
+    background: var(--menuItemBackground);
+    padding: 20px;
+}
+.post > div > *{
+    font-family: 'Courier New', Courier, monospace;
+    display:block;
+}
+.post > div > .header{margin-bottom: 10px;}
+.post > div > .header > .title{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+.post > div > .header > .uname{
+    font-family: 'Courier New', Courier, monospace;
+}   
+
+.post > div > .content {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+.post > div > .content > .text{
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.post > div > .content > img{
+    max-width: 500px;
+    height: 100%;
+}
+.post > div > .content > video{
+    margin-bottom: 10px;
+}
+
+.post > .user-iteractive{
+    margin-top: 2px;
+    width: 100%;
+    padding: 5px;
+    background: var(--menuItemBackground);
+}
+.post > .user-iteractive > .action-buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.post > .user-iteractive > .action-buttons > div{
+    cursor: pointer;
+    position: relative;
+
+    color: var(--menuItemColor);
+    border-radius: 1em;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+.post > .user-iteractive > .action-buttons > div > .selected{
+    color: var(--menuItemColor-selected) !important;
+}
+.post > .user-iteractive > .action-buttons > div > span{
+    margin-left: 25px;
+}
+.post > .user-iteractive > .action-buttons > div > ion-icon{
+    position: absolute;
+    top: 6px;
+}
+
+.post > .user-iteractive > .comments-area{
+    background: #297242;
+    display: block;
+}
+
+.post > .user-iteractive > .comments-area > .comment{
+    background: #00acd7;
+    padding: 10px;
+}
+
+.post > .user-iteractive > .comments-area > .comment > .text{
+    display: block;
+}
+.post > .user-iteractive > .comments-area > .comment > .user-iteractive{
+    display: flex;
+    justify-content: left;
+    padding: 5px;
+}
+.post > .user-iteractive > .comments-area > .comment > .user-iteractive > div{
+    padding: 3px;
+    margin: 2px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}

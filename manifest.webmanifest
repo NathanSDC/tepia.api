@@ -1,0 +1,18 @@
+{
+    "name": "AWebStore",
+    "short_name":"AWS",
+    "background_color":"#000000",
+    "theme_color":"#000000",
+    "icons":[
+        {
+            "src":"assets - images/images/Logo.png",
+            "sizes":"50x50",
+            "type":"img/png",
+            "purpose":"maskable"
+        }
+    ],
+    "start_url":"http://localhost:5500/index.html",
+    "display":"fullscreen",
+    "prefer_related_applications":true,
+    "beforeinstallprompt":""
+}

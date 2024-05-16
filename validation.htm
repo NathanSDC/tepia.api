@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Validating...</title>
+
+    <link rel="shortcut icon" href="assets - images/images/Logo1.2.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="src/validation.css">
+    <link rel="stylesheet" href="src/theme-definition.css">
+</head>
+
+<body>
+    <script type="text/javascript">
+        const url = window.location;
+        const search = url.search;
+
+        console.log(search);
+
+        if (search == "") {
+            const ui = JSON.parse(localStorage.getItem("u"));
+            localStorage.removeItem("u");
+
+            h = new Headers();
+            h.append("Content-Type", "application/json");
+
+            fetch("http://192.168.0.105:9090/users/login",
+                {
+                    method: "PUT",
+                    headers: h,
+                    redirect: "follow",
+                    body: JSON.stringify({
+                        "userName": ui.w,
+                        "password": ui.y
+                    })
+                }
+            )
+                .then((response) => response.text())
+                .then((result) => {
+                    console.log(result);
+                    let u = JSON.parse(result);
+                    console.log(u);
+                    if (u.id != (null || undefined)) {
+                        let string = `{
+                            "userId":${u.id},
+                            "userName":"${u.name}",
+                            "userUName":"${u.userName}",
+                            "userEmail":"${u.email}",
+                            "userPhone":"${u.phone}",
+                            "prefers":${JSON.stringify(u.prefers)},
+                            "posts":${JSON.stringify(u.posts)},
+                            "comments":${JSON.stringify(u.comments)},
+                            "subComments":${JSON.stringify(u.subComments)}
+                        }`;
+                        let json = JSON.parse(string);
+                        localStorage.setItem("u",JSON.stringify(json));
+                        localStorage.setItem("hasSessionActive","true");
+                        window.location = "login.html"
+                    }
+
+                })
+                .catch((error) => console.log(error))
+        } else {
+            let ss = search.split("="); ss[1] = ss[1].replace("%20p", ""); ss[0] = null; let na = []; na[0] = ss[1]; na[1] = ss[2];
+            let u = JSON.parse(`{"w":"${na[0]}","y":"${na[1]}"}`);
+            localStorage.setItem("u", JSON.stringify(u)); window.location = url.origin + url.pathname;
+        }
+
+    </script>
+
+    <div class="center">
+       Hang one second
+    </div>
+</body>
+
+</html>

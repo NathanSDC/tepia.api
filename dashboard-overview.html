@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - </title>
+
+    <link rel="shortcut icon" href="assets - images/images/Logo1.2.png" type="image/x-icon">
+
+    <script src="src/dashboard.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="src/dashboard.css">
+    <link rel="stylesheet" href="src/theme-definition.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src='https://cdn.plot.ly/plotly-2.16.1.min.js'></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body class="default display-none">
+    <main>
+        <section class="menu">
+            <h2 class="non-selectable">Dashboard
+                <small id="uname" class="selectable"></small>
+            </h2>
+
+            <a class="selected non-selectable"><ion-icon name="stats-chart-outline"></ion-icon>Overview</a>
+            <a href="dashboard/blog.html" target="_self" class="non-selectable"><ion-icon name="newspaper-outline"></ion-icon>Blog</a>
+            <a href="dashboard/apps.html" target="_self" class="non-selectable"><ion-icon name="cube-outline"></ion-icon>My Apps</a>
+            <a href="dashboard/my-profile.html" target="_self" class="non-selectable"><ion-icon name="person-circle-outline"></ion-icon>My Profile</a>
+            <a href="dashboard/settings.html" target="_self" class="non-selectable"><ion-icon name="settings-outline"></ion-icon>Settings</a>
+            <a href="" target="_self" class="non-selectable"><ion-icon name="information-circle-outline"></ion-icon>About us</a>
+
+            <p class="non-selectable">AWebstore DsBrd wv1.0.0 04/2024</p>
+        </section>
+        <section class="non-selectable main-view">
+            <h2>Blog:</h2>
+            <p>Most viewed pages: </p>
+            <div id="plotChart1" class="plotChart"></div>
+            <div id="plotChart2" class="plotChart"></div>
+        </section>
+    </main>
+    <script src="dashboard/graphics.js"></script>
+</body>
+</html>

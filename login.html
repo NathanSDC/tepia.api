@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets - images/images/Logo1.2.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <link rel="stylesheet" href="src/login.css">
+    <link rel="stylesheet" href="src/theme-definition.css">
+
+    <title>Login - AWebstore</title>
+</head>
+<body class="gradient">
+        <a class="getBack" href="index.html">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+        </a>
+    <main>
+        <section class="h">
+            <h1>Login</h1>
+            <small>Are you on for the AWebstore Login page.</small>
+        </section>
+        <section class="inputs">
+            <div class="input-f">
+                <label for="uname">Username</label>
+                <input type="text" name="uname" placeholder="Username/Email" id="uname">
+            </div>
+            <div class="input-f" id="pp">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="p">
+                <button onclick="t(this);"><ion-icon name="eye-off-outline"></ion-icon></button>
+                <script type="text/javascript" src="src/login.js"></script>
+            </div>
+        </section>
+        <section class="submit">
+            <div class="input-f">
+                <input type="submit" onclick="window.location.href = 'validation.htm' + config.VALIDATE_URL();" value="Login" class="btn">
+            </div>
+            <small>Already have an account.<a href="sigin.html">Sign-In</a></small>
+        </section>
+    </main>
+</body>
+</html>

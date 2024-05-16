@@ -1,0 +1,187 @@
+:root{
+    --fontSize: 15px;
+    --fontSize-bigTitle: 25px;
+    --fontSize-title: 20px;
+    --fontSize-subTitle: 18px;
+    --fontSize-small: 10px;
+}
+
+:root, .light-blue{
+    /* Main field */
+    --mainBackground: #4a7c8c;
+    --mainColor: #ffffff;
+
+    --plotBackground: transparent;
+
+    /* Menu field */
+    --menuBackground: #ffffff;
+    --menuColor: #000000;
+
+    --menuItemBackground: #ffffff;
+    --menuItemBackground-hover: #c9c8c8;
+    --menuItemBackground-selected: #054b61;
+    --menuItemBackground-highlight: #57a1b9;
+    --menuItemColor: #000000;
+    --menuItemColor-hover: #054b61;
+    --menuItemColor-selected: #c9c8c8;
+    --menuItemColor-highlight: #3c3c3c;
+
+    --menuFooterBackground: #c9c8c8;
+    --menuFooterColor: #000000;
+
+    --menuBasisBackground:#4a7c8c;
+    --menuBasis2Background:#c9c8c8;
+    --menuBasisBackground-transparent:#4a7c8cf0;
+    --menuBasis2Background-transparent:#c9c8c8f0;
+}
+.light-green{
+    /* Main field */
+    --mainBackground: #4a8c55;
+    --mainColor: #ffffff;
+
+    --plotBackground: transparent;
+
+    /* Menu field */
+    --menuBackground: #ffffff;
+    --menuColor: #000000;
+
+    --menuItemBackground: #ffffff;
+    --menuItemBackground-hover: #c9c8c8;
+    --menuItemBackground-selected: #05610a;
+    --menuItemColor: #000000;
+    --menuItemColor-hover: #05610a;
+    --menuItemColor-selected: #c9c8c8;
+
+    --menuFooterBackground: #c9c8c8;
+    --menuFooterColor: #000000;
+
+    --menuBasisBackground:#4a8c55;
+    --menuBasis2Background:#c9c8c8;
+    --menuBasisBackground-transparent:#4a8c55f0;
+    --menuBasis2Background-transparent:#c9c8c8f0;
+}
+.light-red{
+    /* Main field */
+    --mainBackground: #ac5b5b;
+    --mainColor: #ffffff;
+
+    --plotBackground: transparent;
+
+    /* Menu field */
+    --menuBackground: #ffffff;
+    --menuColor: #000000;
+
+    --menuItemBackground: #ffffff;
+    --menuItemBackground-hover: #c9c8c8;
+    --menuItemBackground-selected: #800303;
+    --menuItemColor: #000000;
+    --menuItemColor-hover: #800303;
+    --menuItemColor-selected: #c9c8c8;
+
+    --menuFooterBackground: #c9c8c8;
+    --menuFooterColor: #000000;
+
+    --menuBasisBackground:#ac5b5b;
+    --menuBasis2Background:#c9c8c8;
+    --menuBasisBackground-transparent:#ac5b5bf0;
+    --menuBasis2Background-transparent:#c9c8c8f0;
+}
+.dark-blue{
+    /* Main field */
+    --mainBackground: #025c72;
+    --mainColor: #ffffff;
+
+    --plotBackground: transparent;
+
+    /* Menu field */
+    --menuBackground: #3c3c3c;
+    --menuColor: #ffffff;
+
+    --menuItemBackground: #3c3c3c;
+    --menuItemBackground-hover: #5e6364;
+    --menuItemBackground-selected: #00acd7;
+    --menuItemColor: #ffffff;
+    --menuItemColor-hover: #ffffff;
+    --menuItemColor-selected: #ffffff;
+
+    --menuFooterBackground: #c9c8c8;
+    --menuFooterColor: #000000;
+
+    --menuBasisBackground:#4a7c8c;
+    --menuBasis2Background:#c9c8c8;
+    --menuBasisBackground-transparent:#4a7c8cf0;
+    --menuBasis2Background-transparent:#c9c8c8f0;
+}
+.dark-green{
+    /* Main field */
+    --mainBackground: #297242;
+    --mainColor: #ffffff;
+
+    --plotBackground: transparent;
+
+    /* Menu field */
+    --menuBackground: #3c3c3c;
+    --menuColor: #ffffff;
+
+    --menuItemBackground: #3c3c3c;
+    --menuItemBackground-hover: #5e645f;
+    --menuItemBackground-selected: #2dac34;
+    --menuItemColor: #ffffff;
+    --menuItemColor-hover: #ffffff;
+    --menuItemColor-selected: #ffffff;
+
+    --menuFooterBackground: #c9c8c8;
+    --menuFooterColor: #000000;
+
+    --menuBasisBackground:#297242;
+    --menuBasis2Background:#c9c8c8;
+    --menuBasisBackground-transparent:#297242f0;
+    --menuBasis2Background-transparent:#c9c8c8f0;
+}
+.dark-red{
+    /* Main field */
+    --mainBackground: #722929;
+    --mainColor: #ffffff;
+
+    --plotBackground: transparent;
+
+    /* Menu field */
+    --menuBackground: #3c3c3c;
+    --menuColor: #ffffff;
+
+    --menuItemBackground: #3c3c3c;
+    --menuItemBackground-hover: #645e5e;
+    --menuItemBackground-selected: #ac2d2d;
+    --menuItemColor: #ffffff;
+    --menuItemColor-hover: #ffffff;
+    --menuItemColor-selected: #ffffff;
+
+    --menuFooterBackground: #c9c8c8;
+    --menuFooterColor: #000000;
+
+    --menuBasisBackground:#722929;
+    --menuBasis2Background:#c9c8c8;
+    --menuBasisBackground-transparent:#722929f0;
+    --menuBasis2Background-transparent:#c9c8c8f0;
+}
+
+.non-selectable{
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+}
+.selectable{
+    user-select: initial;
+    -moz-user-select: initial;
+    -webkit-user-select: initial;
+}
+
+.selectable-all{
+    user-select: all;
+    -moz-user-select: -moz-all;
+    -webkit-user-select: all;
+}
+
+.display-none{
+    display: none;
+}

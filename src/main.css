@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    font-size: var(--fontSize);
+    min-height: 120vh;
+}
+
+.page-header{
+    position: relative;
+    
+    width: 100%;
+    height: 100vh;
+    background: var(--menuBackground);
+}
+.page-header > .header-menu{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid var(--menuItemColor);
+    
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+
+    background: var(--menuBackground);
+    color: var(--menuItemColor);
+}
+.header-menu > .menu{
+    display: flex;
+    justify-content: space-between;
+    width:500px;
+    margin-right: 30px;
+}
+.header-menu > h2{
+    position: relative;
+    margin-top: 5px;
+}
+.header-menu > h2 > img{
+    position: absolute;
+}
+.header-menu > h2 > small{
+    padding-left: 30px;
+}
+.header-menu > .menu > li{
+    position: relative;
+    color: var(--menuItemColor);
+    background: var(--menuItemBackground);
+    cursor: pointer;
+
+    padding: 10px;
+    border-radius: 1em;
+}
+.header-menu > .menu > li > a{
+    color: var(--menuItemColor);
+}
+.header-menu > .menu > li:hover{
+    color: var(--menuItemColor-hover);
+    background: var(--menuItemBackground-hover);
+}
+.page-header > hr{
+    width: 95%;
+    margin-left: 2.5%;
+}
+.page-header > .header-call{
+    position: relative;
+    height: 100%;
+    background: linear-gradient(145deg, var(--menuBasis2Background), var(--menuBasisBackground));
+}
+.page-header > .header-call > .background-img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.PH-HC-CCI-fill{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, var(--menuBasis2Background-transparent), var(--menuBasisBackground-transparent));
+}
+.page-header > .header-call > .call-container{
+    position: absolute;
+    bottom: 10vh;
+    left: 10vh;
+    z-index: 1;
+}
+.page-header > .header-call > .call-container > *{
+    display: block;
+}
+.page-header > .header-call > .call-container > .call{
+    font-size: var(--fontSize-bigTitle);
+}
+.page-header > .header-call > .call-container > .call-this-title{
+    font-style: italic;
+}
+.page-header > .header-call > .call-container > .call-button{
+    background: var(--menuItemBackground-selected);
+    color: var(--menuItemColor-selected);
+    border: none;
+    padding: 10px;
+    border-radius: 1em;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.conv-container{
+    position: relative;
+    background: var(--menuItemBackground);
+    color: var(--menuItemColor);
+    font-size: var(--fontSize);
+    padding: 20px;
+
+}
+.conv-container > .conv-title{
+    font-size: var(--fontSize-title);
+    text-align: center;
+    width: 100%;
+    padding-top: 30px;
+}
+.conv-container > .conv-text{
+    font-size: var(--fontSize);
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    margin-top: 10px;
+}
+.conv-container > .conv-text > .ct-paragraph > .ctp-link{
+    color: var(--menuItemColor-hover);
+}
+
+.conv-container > .exampleApps{
+    padding: 20px;
+    height: 400px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    position: relative;
+}
+.exampleApps::-webkit-scrollbar, .exampleApps::-webkit-scrollbar-track{
+    background: var(--menuItemBackground-hover);
+    border-radius: 1em;
+    height: 10px;
+}
+.exampleApps::-webkit-scrollbar-thumb{
+    background: var(--menuItemColor-hover);
+    border-radius: 1em;
+}
+
+.conv-container > .exampleApps > .EA-AD{
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+
+    width: 250px;
+    height: 350px;
+    padding: 10px;
+    margin: 0px 10px;
+
+    background: var(--menuItemBackground-hover);
+    border: 1px solid var(--menuItemBackground-selected);
+    border-radius: 10px;
+}
+.conv-container > .exampleApps > .EA-AD > img{
+    width: 230px;
+    height: 230px;
+}
+.conv-container > .exampleApps > .EA-AD > div > h4{
+    font-size: var(--fontSize-title);
+}
+.conv-container > .exampleApps > .EA-AD > div > small{
+    display: block;
+}
+.conv-container > .exampleApps > .EA-AD > div > small:first-of-type{
+    color: var(--menuItemBackground-selected);
+    padding-top: 2px;
+    padding-bottom: 5px;
+}
+.preFooter{
+    background: var(--menuItemBackground-selected);
+    color: var(--menuItemColor-selected);
+}
+.preFooter > small > a{
+    color: var(--menuItemColor-hover);
+}
+body > footer{
+    width: 100%;
+    height: 400px;
+    background: var(--mainBackground);
+}
+.footer-contacts{
+    position: relative;
+    width: 100%;
+    height: 300px;
+
+    background: var(--menuBackground);
+    display: flex;
+    justify-content: space-around;
+}
+.footer-contacts > section{
+    width: 50%;
+    padding: 20px;
+}
+.footer-contacts > .imageSet{
+    background: linear-gradient(to right,var(--mainBackground),var(--menuBackground));
+}
+.footer-contacts > .imageSet > h2{
+    position: absolute;
+    left: 300px;
+}
+.footer-contacts > .imageSet > img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media (width < 480px){
+    .page-header{
+        height: 90vh;
+    }
+    .page-header > .header-menu{
+        height: 120px;
+        display: flexbox;
+        flex-wrap: wrap;
+    }
+    .page-header > .header-menu > h2{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .page-header > .header-menu > .menu{
+        margin: 0;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .page-header > .header-call > .call-container{
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+    }
+    .conv-container > .exampleApps::-webkit-scrollbar{
+        background: transparent;
+    }
+}
