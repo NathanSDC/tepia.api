@@ -1,11 +1,17 @@
 {
-    "name": "AWebStore",
-    "short_name":"AWS",
-    "background_color":"#000000",
-    "theme_color":"#000000",
+    "name": "Tepia",
+    "short_name":"tepia",
+    "background_color":"#ffffff",
+    "theme_color":"#ffffff",
     "icons":[
         {
-            "src":"assets - images/images/Logo.png",
+            "src":"assets - images/images/Logo1.2.png",
+            "sizes":"500x500",
+            "type":"img/png",
+            "purpose":"maskable"
+        },
+        {
+            "src":"assets - images/images/Logo1.0.png",
             "sizes":"50x50",
             "type":"img/png",
             "purpose":"maskable"
@@ -14,5 +20,5 @@
     "start_url":"http://localhost:5500/index.html",
     "display":"fullscreen",
     "prefer_related_applications":true,
-    "beforeinstallprompt":""
+    "beforeinstallprompt":"Welcome to Tepia webstore!!"
 }
